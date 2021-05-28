@@ -1,3 +1,4 @@
 <% @posts.each do |post| %>
-  <%= render :partial => "post", locals: {:post => post} %>
+  <%# <%= render :partial => "post", :collection => @posts <- this works the next line is a little more abstract %>
+  <%= render(@posts) || "There are no blog posts!" %>
 <% end %>
